@@ -1,0 +1,163 @@
+﻿
+body {
+    color: #333;
+    font-size: small;
+    font-family: "PT Sans","Lucida Grande",Helvetica,Arial,sans-serif;
+    margin: 10px 0 30px 10px;
+    /* background-color: #059862;*/
+    height: 100%;
+}
+
+.inp, .inp70, .inp100, .inp400 {
+    padding: 2px;
+    height: 30px;
+    display: inline;
+    font-size: small;
+}
+
+.inp70 {
+    width: 70px;
+}
+
+.inp100 {
+    width: 100px;
+}
+
+.inp400 {
+    width: 400px;
+}
+
+.inputDate {
+    /*  padding-left: 10px !important;*/
+    background-color: aqua;
+}
+
+.container-sm {
+    /* background: #f1c0c0;*/
+    background-color: #E7E9EB;
+    padding: 5px;
+   
+}
+
+.card-title {
+    font-size: larger;
+}
+
+.card {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
+}
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    }
+
+.fixedSearch {
+}
+
+.fixedResult {
+}
+
+.fixedMap {
+    /* border: 1px solid #ddd;*/
+    /* width: 24%;*/
+
+    float: left;
+  /*  border: 2px solid #c00;*/
+    padding: 5px;
+    top: 45px;
+    position: fixed;
+    width: 25%;
+    display: block;
+}
+
+.divMap {
+    padding: 5px;
+    width: 100%;
+   
+}
+
+
+.googleMap {
+    width: auto;
+    height: 500px;
+    padding: 5px;
+}
+
+.hotel-img {
+    margin-left: 10px;
+    max-width: 154px;
+    height: auto;
+}
+
+/*for map*/
+.divMapInfo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 90px;
+    font-size: 11px;
+    overflow: hidden;
+    /*	border: solid 1px green;*/
+}
+
+    .divMapInfo .divMapInfoHdr {
+        /*  height: 22px !important;*/
+        color: #3552a4;
+        text-align: left;
+        padding: 3px 0 6px 0px;
+        border-bottom: 1px solid #5574b9;
+        font-size: 12px;
+        width: 196px;
+        /*  overflow: hidden;*/
+        /*	border: solid 1px red;*/
+    }
+
+    .divMapInfo .divMapInfoContent {
+        padding: 8px 4px 4px 0px;
+        overflow: hidden;
+        width: 190px;
+        /*  height: 30px !important;*/
+        /*	border: solid 1px blue;*/
+    }
+
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 1200px) {
+    .googleMap {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+    .googleMap {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .googleMap {
+        width: 350px;
+        height: 200px;
+    }
+
+    .fixedSearch {
+        top: 300px;
+        position: fixed;
+    }
+
+    .fixedResult {
+        top: 550px;
+        position: fixed;
+    }
+}
