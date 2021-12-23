@@ -14,7 +14,6 @@ $(document).ready(function () {
     initGeocodeGet();
     initDates();
     windowScrollTop();
-    
     initGmapSetting();
   
 });
@@ -51,9 +50,7 @@ function initDates() {
 }
 
 function onSearchByLocation() {
-    
     searchHotel();
-
 }
 function searchHotel() {
     $("#tblHotelResult").find("tr").remove();
