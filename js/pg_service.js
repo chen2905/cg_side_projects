@@ -68,7 +68,6 @@ function searchHotel() {
         $('#spanSearchMsg').hide();
         iCurrentPage = 1;
         hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPage, iCheckedStars.toString(),iSort);
-
         // alert(iCurrentPage);
       
     } else {
@@ -84,7 +83,6 @@ function windowScrollTop() {
         
         if ($(window).scrollTop() == $(document).height() - $(window).height()) {
             iCurrentPage += 1;
-            
             hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPage, iCheckedStars.toString(),iSort);
             console.log('gmarker Items after scroll:'+_gmarkers.length);
         }
