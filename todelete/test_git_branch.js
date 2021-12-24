@@ -1,1 +1,1 @@
-﻿console.log("hello branch");
+﻿console.log("changed after merging")
