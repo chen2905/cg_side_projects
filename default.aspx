@@ -82,6 +82,24 @@
 
 
                 </div>
+                 <div class="row">
+                    <p class="badge bg-success">Dec 26, 2021</p>
+                    <p>
+                      This is a project to show how to add git to your machine and start using git into your new or existing project
+
+                    </p>
+                    <p>
+                       <ul>
+                           <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">Installing Git</a></li>
+                           <li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR" target="_blank">Git & GitHub Tutorial for Beginners</a></li>
+                            <li><a href ="https://www.youtube.com/watch?v=gkDASVE_Hdg&ab_channel=BillRaymond" target="_blank">Use Git in VS 2019</a></li>
+                            <li><a href ="https://www.youtube.com/watch?v=F2DBSH2VoHQ&ab_channel=Ihatetomatoes" target="_blank">User Git in VS Code</a></li>    
+                       </ul>
+                       
+                    </p>
+
+
+                </div>
             </div>
         </div>
     </div>
