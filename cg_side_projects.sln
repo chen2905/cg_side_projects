@@ -24,6 +24,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "cg_side_projects", ".", "{6
 		SlnRelativePath = "..\cg_side_projects\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcf_services", "wcf_services\wcf_services.csproj", "{7D719540-21D9-4B13-9CAA-5BCC00827919}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{6A1DEA90-E92B-41A8-98A2-678DB43CF319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A1DEA90-E92B-41A8-98A2-678DB43CF319}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A1DEA90-E92B-41A8-98A2-678DB43CF319}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7D719540-21D9-4B13-9CAA-5BCC00827919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D719540-21D9-4B13-9CAA-5BCC00827919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D719540-21D9-4B13-9CAA-5BCC00827919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D719540-21D9-4B13-9CAA-5BCC00827919}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
