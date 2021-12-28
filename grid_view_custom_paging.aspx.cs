@@ -13,7 +13,11 @@ public partial class grid_view_custom_paging : System.Web.UI.Page
             {
             int totalRows = 0;
             ViewState["Sort"] = "distance";
-            gvHotel.DataSource = SearchHotels("-33.8688197", "151.2092955", 5, "km", 1, gvHotel.PageSize,  "", ViewState["Sort"].ToString(), out totalRows);
+
+            wcf_service.ServiceClient cl = new wcf_service.ServiceClient();
+            gvHotel.DataSource = cl.SearchHotels( out totalRows,"-33.8688197", "151.2092955", 5, "km", 1, gvHotel.PageSize, "", ViewState["Sort"].ToString());
+
+            //gvHotel.DataSource = SearchHotels("-33.8688197", "151.2092955", 5, "km", 1, gvHotel.PageSize,  "", ViewState["Sort"].ToString(), out totalRows);
             gvHotel.DataBind();
 
             DataBindPageRepeater(0, gvHotel.PageSize, totalRows);

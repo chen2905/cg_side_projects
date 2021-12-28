@@ -1,21 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
-using System.Web.Script.Serialization;
+using System.Web;
 
-namespace wcf_services
+namespace web_api
     {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service.svc or Service.svc.cs at the Solution Explorer and start debugging.
-    public class Service : IService
+    public class HotelRepos : IHotelRepos
         {
         public List<Hotel> SearchHotels(string iCentreLat, string iCentreLon, int iRadius, string iMeasure, int iPageNumber,
-                                    int iPageSize, string iSelectedStars, string iSort, out int oTotalRows)
+                                   int iPageSize, string iSelectedStars, string iSort)
             {
             ISqlDataAccess _db = new SqlDataAccess();
             string SqlString = @"syp_Hotel_Columbus_pmGeocodeWithScroll 
@@ -40,13 +33,13 @@ namespace wcf_services
                 Sort = iSort
                 };
             List<Hotel> lstHotels = _db.LoadData<Hotel, dynamic>(SqlString, param);
-            oTotalRows = 0;
+           // oTotalRows = 0;
             if (lstHotels.Count > 0)
                 {
                 foreach (Hotel hotel in lstHotels)
                     {
                     hotel.HotelImagePath = HotelImagePath(hotel.HotelID);
-                    oTotalRows = hotel.TotalRows;
+                    //oTotalRows = hotel.TotalRows;
                     }
 
 
@@ -75,17 +68,5 @@ namespace wcf_services
             return hotelImagePath;
             }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-            {
-            if (composite == null)
-                {
-                throw new ArgumentNullException("composite");
-                }
-            if (composite.BoolValue)
-                {
-                composite.StringValue += "Suffix";
-                }
-            return composite;
-            }
         }
     }

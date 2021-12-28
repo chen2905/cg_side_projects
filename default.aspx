@@ -19,7 +19,7 @@
                     <a class="nav-link" href="data_load_on_scroll.aspx">Data Load On Scroll</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="grid_view_custom_paging.aspx">Grid View Custom Paging</a>
+                    <a class="nav-link" href="grid_view_custom_paging.aspx">Grid View Custom Paging with WCF</a>
                 </li>
 
             </ul>
@@ -82,24 +82,52 @@
 
 
                 </div>
-                 <div class="row">
+                <div class="row">
                     <p class="badge bg-success">Dec 26, 2021</p>
                     <p>
-                      This is a project to show how to add git to your machine and start using git into your new or existing project
+                        This is a project to show how to add git to your machine and start using git into your new or existing project
 
                     </p>
                     <p>
-                       <ul>
-                           <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">Installing Git</a></li>
-                           <li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR" target="_blank">Git & GitHub Tutorial for Beginners</a></li>
-                            <li><a href ="https://www.youtube.com/watch?v=gkDASVE_Hdg&ab_channel=BillRaymond" target="_blank">Use Git in VS 2019</a></li>
-                            <li><a href ="https://www.youtube.com/watch?v=F2DBSH2VoHQ&ab_channel=Ihatetomatoes" target="_blank">User Git in VS Code</a></li>    
-                       </ul>
+                        <ul>
+                            <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">Installing Git</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR" target="_blank">Git & GitHub Tutorial for Beginners</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=gkDASVE_Hdg&ab_channel=BillRaymond" target="_blank">Use Git in VS 2019</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=F2DBSH2VoHQ&ab_channel=Ihatetomatoes" target="_blank">User Git in VS Code</a></li>
+                        </ul>
+
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="badge bg-success">Dec 28, 2021</p>
+                    <p>WCF</p>
+                    <p>
+                        This <a href="grid_view_custom_paging.aspx">Grid View Custom Paging</a> .net web form demo on create a simple grid view with sorting and paging. it also get data with WCF
+                    </p>
+                    <p>
+                       WCF in Visual Studio 2019 (Getting Started)
+Windows Communication Foundation (WCF) is a framework for building service-oriented applications. Using WCF, you can send data as asynchronous messages from one service endpoint to another. A service endpoint can be part of a continuously available service hosted by IIS, or it can be a service hosted in an application. An endpoint can be a client of a service that requests data from a service endpoint. The messages can be as simple as a single character or word sent as XML, or as complex as a stream of binary data. A few sample scenarios include:
+
+A secure service to process business transactions.
+
+A service that supplies current data to others, such as a traffic report or other monitoring service.
+
+A chat service that allows two people to communicate or exchange data in real time.
+
+A dashboard application that polls one or more services for data and presents it in a logical presentation.
+
+Exposing a workflow implemented using Windows Workflow Foundation as a WCF service.
+
+A Silverlight application to poll a service for the latest data feeds.
+
+While creating such applications was possible prior to the existence of WCF, WCF makes the development of endpoints easier than ever. In summary, WCF is designed to offer a manageable approach to creating Web services and Web service clients
                        
                     </p>
-
+                    <p>A demo WCF project can be find in X:\1-trunk\test\cg_side_projects\wcf_services</p>
 
                 </div>
+
+
             </div>
         </div>
     </div>

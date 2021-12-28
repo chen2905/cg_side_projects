@@ -14,8 +14,8 @@ namespace wcf_services
         {
 
         [OperationContract]
-        List<Hotel> SearchHotels(string iCentreLat, string iCentreLon, int iRadius, string iMeasure, int iPageNumber, int iPageSize, string iSelectedStars, string iSort);
-
+        List<Hotel> SearchHotels(string iCentreLat, string iCentreLon, int iRadius, string iMeasure, int iPageNumber,
+                                    int iPageSize, string iSelectedStars, string iSort, out int oTotalRows);
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
