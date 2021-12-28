@@ -16,8 +16,14 @@
                     <a class="nav-link active" href="default.aspx">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="data_load_on_scroll.aspx">Data Load On Scroll</a>
+                    <a class="nav-link" href="data_load_on_scroll.aspx">Data Load On Scroll(WS)</a>
                 </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="  data_load_on_scroll_with_api.aspx">Data Load On Scroll(API)</a>
+                </li>
+
+
+              
                 <li class="nav-item">
                     <a class="nav-link" href="grid_view_custom_paging.aspx">Grid View Custom Paging</a>
                 </li>
