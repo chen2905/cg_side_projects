@@ -16,9 +16,10 @@ function hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPageNumber, iSelec
     console.log(api_url);
 
     $.ajax({
-        type: 'GET',
         url: api_url,
-        dataType: "json",
+        type: 'post',
+        crossDomain: true,
+        dataType: 'jsonp xml',
         success: function (data) {
         
             var hotelTable = $('#tblHotelResult tbody');
@@ -39,8 +40,22 @@ function hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPageNumber, iSelec
              //$('#divLoading').hide();
             $('#spnLoading').hide();
         },
-        error: function (err) {
-            alert("error:"+ err.responseText);
+        error: function (jqXHR, exception) {
+            if (jqXHR.status === 0) {
+                alert('Not connect.\n Verify Network.');
+            } else if (jqXHR.status == 404) {
+                alert('Requested page not found. [404]');
+            } else if (jqXHR.status == 500) {
+                alert('Internal Server Error [500].');
+            } else if (exception === 'parsererror') {
+                alert('Requested JSON parse failed.');
+            } else if (exception === 'timeout') {
+                alert('Time out error.');
+            } else if (exception === 'abort') {
+                alert('Ajax request aborted.');
+            } else {
+                alert('Uncaught Error.\n' + jqXHR.responseText);
+            }
         }
     });
 }

@@ -64,7 +64,7 @@
                         This <a href="data_load_on_scroll.aspx">Data Load On Scroll</a> .net web form demo on how to integrage
                     </p>
                     <p>
-                        html, jquery,boostrap 5, web service, dapper, generic list
+                        html, jquery,boostrap 5, web service, dapper, generic list, DI
                        
                     </p>
 
