@@ -9,28 +9,7 @@
         <p>Do it yourself and learn</p>
     </div>
 
-    <nav class="navbar navbar-expand-sm ">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="default.aspx">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="data_load_on_scroll.aspx">Data Load On Scroll(WS)</a>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="  data_load_on_scroll_with_api.aspx">Data Load On Scroll(API)</a>
-                </li>
-
-
-              
-                <li class="nav-item">
-                    <a class="nav-link" href="grid_view_custom_paging.aspx">Grid View Custom Paging with WCF</a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
+   
 
     <div class="container mt-5">
         <div class="row">
@@ -43,17 +22,21 @@
                 <p>Lorem ipsum dolor sit ame.</p>
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
+                    <a class="nav-link active" href="default.aspx">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data_load_on_scroll.aspx">Data Load On Scroll(WS)</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="  data_load_on_scroll_with_api.aspx">Data Load On Scroll(API)</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="grid_view_custom_paging.aspx">Grid View Custom Paging with WCF</a>
+                </li>
+
+                      <li class="nav-item">
+                    <a class="nav-link" href="call_back.aspx">Explain callback function in a pop song</a>
+                </li>
                 </ul>
                 <hr class="d-sm-none">
             </div>

@@ -33,17 +33,20 @@ namespace web_api
                 Sort = iSort
                 };
             List<Hotel> lstHotels = _db.LoadData<Hotel, dynamic>(SqlString, param);
-           // oTotalRows = 0;
-            if (lstHotels.Count > 0)
-                {
-                foreach (Hotel hotel in lstHotels)
-                    {
-                    hotel.HotelImagePath = HotelImagePath(hotel.HotelID);
-                    //oTotalRows = hotel.TotalRows;
-                    }
+
+            lstHotels.ForEach(h => h.HotelImagePath = HotelImagePath(h.HotelID));
+
+            // oTotalRows = 0;
+            //if (lstHotels.Count > 0)
+            //    {
+            //    foreach (Hotel hotel in lstHotels)
+            //        {
+            //        hotel.HotelImagePath = HotelImagePath(hotel.HotelID);
+            //        //oTotalRows = hotel.TotalRows;
+            //        }
 
 
-                }
+            //    }
 
             return lstHotels;
             }

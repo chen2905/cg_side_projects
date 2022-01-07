@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace web_api
@@ -11,9 +13,7 @@ namespace web_api
             {
             // Web API configuration and services
 
-            var cors = new System.Web.Http.Cors.EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
-            // Web API routes
+         
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -21,6 +21,13 @@ namespace web_api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            // configure json formatter
+            JsonMediaTypeFormatter jsonFormatter = config.Formatters.JsonFormatter;
+
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            //var xml = GlobalConfiguration.Configuration.Formatters.XmlFormatter;
+            //xml.Indent = true;
             }
         }
     }

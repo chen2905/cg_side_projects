@@ -1,7 +1,12 @@
 ﻿
 
-function f() {
-    $("#divMapMsg").html('<span class="badge rounded-pill bg-success">Hotels found for ' + $('#geoCodes').val()+'</span>');
+function f_callback(iHotelCount, iLocation) {
+
+    if (iLocation.length > 40) {
+        iLocation = iLocation.substring(0, 40) + ' ..';
+    }
+
+    $("#divMapMsg").html('<span class="badge rounded-pill bg-success map-msg">' + iHotelCount + ' Hotels found for ' + iLocation +'</span>');
 }
 function hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPageNumber, iSelectedStars,iSort) {
     $('#spnLoading').show();
@@ -28,13 +33,24 @@ function hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPageNumber, iSelec
             _gmarkers.push(map_serivce_addMapMarker(0, 0, iLat, iLng, 'Center', '', 0, map, 0));
 
             $(data).each(function (index, hotel) {
+                iHotelCount += 1;
                 _gmarkers.push(map_serivce_addMapMarker(hotel.HotelOrder, hotel.HotelOrder, hotel.Lat, hotel.Lng, hotel.HotelName, hotel.City, 0, map, hotel.HotelID));
-              hotelTable.append('<tr><td>' + hotel_service_hotelCard(hotel.HotelImagePath, hotel.HotelName, hotel.Stars, hotel.DistanceFromCenter, hotel.HotelOrder) + '</td></tr>'
-              
-                );
+                hotelTable.append('<tr><td>' + hotel_service_hotelCard(hotel.HotelImagePath, hotel.HotelName, hotel.Stars, hotel.DistanceFromCenter, hotel.HotelOrder) + '</td></tr>'
+            );
             });
             $('#divHotelResult').slideDown("slow", function () {
-                f();
+               // f_callback(iHotelCount, $('#geoCodes').val());
+
+                // below action will be reused then it is better to use above call back function!
+                //below is better for programer to see the code flow
+                var iLocation = $('#geoCodes').val();
+
+                if (iLocation.length > 40) {
+                    iLocation = iLocation.substring(0, 40) + ' ..';
+                }
+
+                $("#divMapMsg").html('<span class="badge rounded-pill bg-success map-msg">' + iHotelCount + ' Hotels found for ' + iLocation + '</span>');
+
             });
           /*   .css("background","green");*/
              //$('#divLoading').hide();

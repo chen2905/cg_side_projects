@@ -3,12 +3,14 @@ var countryRestrict;
 var iLat;
 var iLng;
 var iCurrentPage = 0;
+var iHotelCount = 0;
 var iCheckedStars = [];
 var iSort ='distance';
 var mapProp;
 var map;
 var bounds;
 var _gmarkers = [];
+
 $(document).ready(function () {
     onSortChange();
     initGeocodeGet();
@@ -67,6 +69,7 @@ function searchHotel() {
         //alert(iLat + ' ' + iLng);
         $('#spanSearchMsg').hide();
         iCurrentPage = 1;
+        iHotelCount = 0;
         hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPage, iCheckedStars.toString(),iSort);
         // alert(iCurrentPage);
       

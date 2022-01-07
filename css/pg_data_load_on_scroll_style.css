@@ -7,7 +7,10 @@ body {
     /* background-color: #059862;*/
     height: 100%;
 }
-
+.map-msg {
+    font-size: 110%;
+    max-width: 465px;
+}
 .inp, .inp70, .inp100, .inp400 {
     padding: 2px;
     height: 30px;

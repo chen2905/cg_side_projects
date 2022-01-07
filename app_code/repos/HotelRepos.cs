@@ -42,16 +42,8 @@ public class HotelRepos :iHotelRepos
             Sort = iSort
             };
         List<Hotel> lstHotels = _db.LoadData<Hotel, dynamic>(SqlString, param);
-
-        if (lstHotels.Count > 0)
-            {
-            foreach (Hotel hotel in lstHotels)
-                {
-                hotel.HotelImagePath = HotelImagePath(hotel.HotelID);
-                }
-
-          
-            }
+        lstHotels.ForEach(h => h.HotelImagePath = HotelImagePath(h.HotelID));
+    
 
         return lstHotels;
         }
