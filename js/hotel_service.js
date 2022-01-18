@@ -40,7 +40,6 @@ function hotel_service_loadHotelDataViaWS(iLat, iLng, iCurrentPageNumber, iSelec
             });
             $('#divHotelResult').slideDown("slow", function () {
                // f_callback(iHotelCount, $('#geoCodes').val());
-
                 // below action will be reused then it is better to use above call back function!
                 //below is better for programer to see the code flow
                 var iLocation = $('#geoCodes').val();
